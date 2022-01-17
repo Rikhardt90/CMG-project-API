@@ -1,0 +1,449 @@
+{
+
+    "Users": [
+
+        {
+
+            "info": "POST A NEW ADMIN",
+            "endpoint": "/api/users/",
+            "action": "POST",
+            "requested": {
+
+                "name": "Example",
+                "email": "example@gmail.com",
+                "old": 33,
+                "password": "admin password, you can send us an email to request this password"
+
+            },
+            "response" : {
+
+                "name": "Example",
+                "email": "example@gmail.com",
+                "old": 33
+
+            }
+
+        },
+
+        {
+
+            "info": "GET USERS //this is only for admins",
+            "endpoint": "/api/users/",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e1980fe708e0c3c1efd7b4",
+                "name": "Example",
+                "email": "example@gmail.com",
+                "old": 33,
+                "password": "$2b$10$P3aXCSMuMY/JQqd4MoQnN.NXjF68B3iPJveq.t.IS5qXTttQ.NYwu",
+                "__v": 0,
+                "createdAt": "2022-01-14T15:34:39.934Z",
+                "updatedAt": "2022-01-14T15:48:19.956Z"
+
+            }
+
+        },
+
+        {
+
+            "info": "LOGIN",
+            "endpoint": "/api/users/login",
+            "action": "LOGIN",
+            "requested": {
+
+                "email": "example@gmail.com",
+	            "password": "admin password" 
+
+            },
+            "response" : {
+
+                "token": "recieves token"
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE USER BY ID //this is only for admins",
+            "endpoint": "/api/users/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "ExampleModified",
+                "email": "example@gmail.com",
+                "old": 39,
+                "password": "admin password",
+                "__v": 0
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "ExampleModified",
+                    "email": "example@gmail.com",
+                    "old": 39,
+                    "password": "admin password",
+                    "_id": "61e1980fe708e0c3c1efd7b4",
+                    "__v": 0
+                },
+                "old": {
+                    "_id": "61e1980fe708e0c3c1efd7b4",
+                    "name": "Example",
+                    "email": "example@gmail.com",
+                    "old": 39,
+                    "password": "$2b$10$P3aXCSMuMY/JQqd4MoQnN.NXjF68B3iPJveq.t.IS5qXTttQ.NYwu",
+                    "__v": 0,
+                    "createdAt": "2022-01-14T15:34:39.934Z",
+                    "updatedAt": "2022-01-14T15:34:39.934Z"
+                }
+
+            }
+
+        },
+
+        {
+
+            "info": "LOGOUT //this is only for admins",
+            "endpoint": "/api/users/logout",
+            "action": "LOGOUT",
+            "response" : {
+
+                "token": "null"
+
+            }
+
+
+        }
+
+    ],
+
+    "Effects": [
+
+        {
+
+            "info": "POST A NEW EFFECT //this is only for admins",
+            "endpoint": "/api/effects",
+            "action": "POST",
+            "requested": {
+
+                "name": "NameExample",
+                "model": "ModelExample"
+
+            },
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ALL EFFECTS",
+            "endpoint": "/api/effects",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET EFFECT BY ID",
+            "endpoint": "/api/effects/:id",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH EFFECT BY ID //this is only for admins",
+            "endpoint": "/api/effects/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "NameExampleModified",
+                "model": "ModelExampleModified"
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "NameExampleModified",
+                    "model": "ModelExampleModified",
+                    "_id": "61e198a7e708e0c3c1efd7bb"
+                },
+                "old": {
+                    "_id": "61e198a7e708e0c3c1efd7bb",
+                    "name": "NameExample",
+                    "model": "ModelExample",
+                    "createdAt": "2022-01-14T15:37:11.703Z",
+                    "updatedAt": "2022-01-14T15:37:11.703Z",
+                    "__v": 0
+
+                }
+
+            }
+
+        },
+
+        {
+
+            "info": "DELETE EFFECT BY ID //this is only for admins",
+            "endpoint": "/api/effect/:id",
+            "action": "DELETE",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        }
+
+    ],
+
+    "Recording": [
+
+        {
+
+            "info": "POST A NEW RECORDING //this is only for admins",
+            "endpoint": "/api/recording",
+            "action": "POST",
+            "requested": {
+
+                "name": "NameExample",
+                "model": "ModelExample"
+
+            },
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ALL RECORDINGS",
+            "endpoint": "/api/recording",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET RECORDING BY ID",
+            "endpoint": "/api/recording/:id",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH RECORDING BY ID //this is only for admins",
+            "endpoint": "/api/recording/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "NameExampleModified",
+                "model": "ModelExampleModified"
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "NameExampleModified",
+                    "model": "ModelExampleModified",
+                    "_id": "61e198a7e708e0c3c1efd7bb"
+                },
+                "old": {
+                    "_id": "61e198a7e708e0c3c1efd7bb",
+                    "name": "NameExample",
+                    "model": "ModelExample",
+                    "createdAt": "2022-01-14T15:37:11.703Z",
+                    "updatedAt": "2022-01-14T15:37:11.703Z",
+                    "__v": 0
+
+                }
+
+            }
+
+        },
+
+        {
+
+            "info": "DELETE RECORDING BY ID //this is only for admins",
+            "endpoint": "/api/recording/:id",
+            "action": "DELETE",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        }
+
+    ],
+
+    "Instruments": [
+
+        {
+
+            "info": "POST A NEW INSTRUMENT //this is only for admins",
+            "endpoint": "/api/instrument",
+            "action": "POST",
+            "requested": {
+
+                "model": "Example",
+                "img": "ExampleUrl",
+                "price": 321,
+                "components": "EffectId",
+                "recording": "RecordingId"
+
+            },
+            "response" : {
+
+                "effect": [
+                    "ComponentId"
+                ],
+                "_id": "61e29e53e9daceabb859b14c",
+                "model": "InstrumentExample",
+                "img": "ExampleUrl",
+                "price": 321,
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ALL INSTRUMENTS",
+            "endpoint": "/api/instrument",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e19aad1099c8adb9581088",
+                "model": "Example",
+                "img": "ExampleUrl",
+                "price": 821,
+                "effects": ["effectId"],
+                "recording": ["recordingId"],
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ONE INSTRUMENT BY MODEL",
+            "endpoint": "/api/instrument/:model",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e19aad1099c8adb9581088",
+                "model": "Example",
+                "img": "ExampleUrl",
+                "price": 821,
+                "effect": ["EffectId"],
+                "recording": ["RecordingId"],
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE INSTRUMENT BY ID //this is only for admins",
+            "endpoint": "/api/instrument/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "model": "ExampleInstrumentModified",
+                "img": "ImgUrlModified",
+                "price": 80,
+                "effect": ["EffectId"],
+                "recording": ["recordingId"]
+
+            },
+            "response" : {
+
+                "_id": "61e19aad1099c8adb9581088",
+                "model": "ExamplePcModified",
+                "img": "ImgUrlModified",
+                "price": 80,
+                "effect": ["EffectId"],
+                "recording": ["RecordingId"],
+                "__v": 0
+
+            }
+
+        }
+
+    ]
+
+}

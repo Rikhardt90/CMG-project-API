@@ -33,7 +33,7 @@ app.use((req, res, next) => {
 
 });
 
-// const documentation = require("./src/utils/documentation/index.json");
+const documentation = require("./src/utils/documentation/index.json");
 
 app.use(cors({
 
