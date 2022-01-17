@@ -12,7 +12,7 @@ const postNewRecording = async (req, res, next) => {
 
         const recordingDB = await newRecording.save();
 
-        return res.status(201).json(effectDB);
+        return res.status(201).json(recordingDB);
 
     } catch (error) {
         

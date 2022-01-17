@@ -17,6 +17,7 @@ const postNewInstrument = async (req, res, next) => {
 
         newInstrument.price = req.body.price;
         newInstrument.effects = req.body.effects;
+        newInstrument.recording = req.body.recording;
 
         const instrumentDB = await newInstrument.save();
 
@@ -34,7 +35,7 @@ const getAllInstruments = async (req, res, next) => {
 
     try {
 
-        const InstrumentsDB = await Instrument.find().populate("effects");
+        const InstrumentsDB = await Instrument.find().populate("effects").populate("recording");
         
         res.status(200).json(InstrumentsDB)
 
@@ -50,7 +51,7 @@ const getInstrument = async (req, res, next) => {
     try {
 
         const { model } = req.params;
-        const InstrumentDB = await Instrument.find({ model: model }).populate("effects");
+        const InstrumentDB = await Instrument.find({ model: model }).populate("effects").populate("recording");
 
         if (!InstrumentDB) {
 

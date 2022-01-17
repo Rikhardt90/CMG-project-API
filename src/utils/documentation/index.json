@@ -359,7 +359,7 @@
                 "model": "Example",
                 "img": "ExampleUrl",
                 "price": 321,
-                "components": "EffectId",
+                "effect": "EffectId",
                 "recording": "RecordingId"
 
             },
